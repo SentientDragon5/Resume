@@ -1,5 +1,5 @@
 # Resume
 
-[Open the latest version in the Browser.](https://sentientdragon5.github.io/Resume/cv.pdf)
+[Open the latest version in the Browser.](https://sentientdragon5.github.io/Resume/)
 
 Made using [this template](https://github.com/jitinnair1/autoCV/tree/main)
