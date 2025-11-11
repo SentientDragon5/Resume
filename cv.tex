@@ -1,0 +1,123 @@
+\documentclass[a4paper,11pt]{article}
+
+%----------------------------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[scale=0.9, top=1.5cm, bottom=1.5cm, left=2cm, right=2cm]{geometry}
+
+% https://tug.org/FontCatalogue/sansseriffonts.html
+\usepackage[sfdefault,light]{FiraSans}
+\usepackage[T1]{fontenc}
+\renewcommand*\oldstylenums[1]{{\firaoldstyle #1}}
+
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{titlesec}
+
+%----------------------------------------------------------------------------
+
+% Colors
+\definecolor{goodgreen}{HTML}{00ab44}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+
+% Section Formatting
+\titleformat{\section}{\Large\scshape\raggedright\color{goodgreen}}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{12pt}{8pt}
+
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+\newenvironment{joblong}[2]
+    {
+    \par\vspace{4pt}\noindent
+    \begin{tabularx}{\linewidth}{@{} X r @{}}
+    \textbf{#1} & #2 \\
+    \end{tabularx}
+    \vspace{-6pt}
+    \begin{itemize}[nosep, leftmargin=1.5em, itemsep=2pt, label=--]
+    }
+    {
+    \end{itemize}
+    \vspace{4pt}
+    }
+
+
+%----------------------------------------------------------------------------
+\begin{document}
+\pagestyle{empty} % No page numbers
+
+
+%----------------------------------------------------------------------------
+\begin{center}
+    {\Huge \textbf{Logan Shehane}}\\[8pt]
+    \href{https://github.com/SentientDragon5}{\faGithub\ SentientDragon5} \ $|$ \ 
+    \href{https://linkedin.com/in/lashehane/}{\faLinkedin\ lashehane} \ $|$ \ 
+    \href{https://sentientdragon5gamedev.itch.io}{\faGamepad\ Demos} \ $|$ \ 
+    \href{mailto:lashehane@outlook.com}{\faEnvelope\ lashehane@outlook.com}
+\end{center}
+
+%----------------------------------------------------------------------------
+\section{Summary}
+Software Engineer with experience in full-stack software development and User Experience Development. Full-time student at UCSC with plans to get Masters in Human Computer Interaction or Computer Science. Successfully developed and published multiple tech demos and a complete game.
+
+
+%----------------------------------------------------------------------------
+\section{Education}
+\noindent
+\begin{tabularx}{\linewidth}{@{} X r @{}}    
+\textbf{B.S. Computer Science: Game Design at UC Santa Cruz} (GPA: 3.93) & Sept 2022 - June 2026 \\
+\end{tabularx}
+\vspace{-6pt}
+\begin{itemize}[nosep, leftmargin=1.5em, itemsep=2pt, label=--]
+    \item Working on Capstone Game Project, Procedural Generation, AI, and LLMs
+    \item Well-rounded knowledge in a variety of topics including Sailing, Paleontology, Music
+\end{itemize}
+
+%----------------------------------------------------------------------------
+\section{Work Experience}
+
+\begin{joblong}{Software Development Intern -- Guide Robotics (Tokyo, Japan)}{June 2025 - Aug 2025}
+    \item Configured ROS and Gazebo environments to simulate a TurtleBot 4, successfully integrating both the digital twin and physical robot with internal software tools.
+    \item Researched and implemented a YOLO-based computer vision model for object identification on a Qualcomm RB3 Gen 2 Development Kit.
+\end{joblong}
+
+\begin{joblong}{Software Researcher -- UCSC Procedural Generation Lab}{Sept 2024 - June 2025}
+    \item Programmed scripts to make procedural worlds using algorithms like Wave Function Collapse.
+    \item Created several datasets for use in training Large Language Models and fine-tuned LLMs.
+    \item Assisted in writing a paper accepted by ACM, contributing to research and technical details.
+\end{joblong}
+
+\begin{joblong}{Tutor and Grader -- UCSC Baskin School of Engineering}{Sept 2024 - June 2025}
+    \item Held weekly meetings with students to instruct on the use of 3D modeling software.
+    \item Created teaching materials, graded work, and provided feedback to students.
+\end{joblong}
+
+\begin{joblong}{Independent Contractor -- Turbostrat LLC}{Mar 2024 - Apr 2024}
+    \item Created interactive UI and tutorial for mobile AR game.
+    \item Planned, implemented, and documented software and design.
+\end{joblong}
+
+\begin{joblong}{Robotics Club Team Lead -- Slugbotics Arm Team}{Sept 2023 - June 2025}
+    \item Contributed to a custom open source robotic arm; maintained and expanded the codebase.
+    \item Organized meetings, ran demos, and onboarded new members.
+\end{joblong}
+
+\begin{joblong}{Rocket Team Contributor -- UCSC Rocket Team (TVC)}{Sept 2024 - June 2025}
+    \item Developed applications utilizing Satellite APIs and OpenCV computer vision to compare live camera feeds and identify suitable landing locations for a moving rocket.
+    \item Conducted research and CAD for hardware components including the camera and mount.
+\end{joblong}
+
+%----------------------------------------------------------------------------
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{} l X @{}}
+\textbf{Languages} & Python, C\# (Unity), C, C++, Javascript, HTML, CSS \\ [4pt]
+\textbf{Technologies} & Unity, Godot, Blender 3D, LLMs, APIs, Git, Unix, ROS2, Gazebo, OpenCV, YOLO, RVis
+\end{tabularx}
+
+\vfill
+\center{\footnotesize Last updated: \today}
+
+\end{document}
