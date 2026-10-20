@@ -28,24 +28,30 @@
 \titleformat{\section}{\large\scshape\raggedright\color{goodgreen}}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{4pt}{2pt}
 
-\newcolumntype{C}{>{\centering\arraybackslash}X} 
+\newcolumntype{C}{>{\centering\arraybackslash}X}
 
-\newcommand{\entrytech}[1]{\noindent{\small\textit{Technologies:} #1}\par\vspace{-2pt}}
+\newcommand{\entrytech}[1]{{\small\textit{Technologies:} #1}\par}
 
-\newenvironment{joblong}[2]
-    {
+\newenvironment{joblong}[3][]
+    {%
     \par\vspace{2.5pt}\noindent
     \begin{tabularx}{\linewidth}{@{} X r @{}}
-    \textbf{#1} & #2 \\
-    \end{tabularx}
-    \vspace{-7pt}
-    \begin{itemize}[nosep, leftmargin=1.25em, itemsep=1.2pt, label=--]
+    \textbf{#2} & #3 \\
+    \end{tabularx}%
+    \par\nopagebreak
+    \if\relax\detokenize{#1}\relax
+      \vspace{-4pt}%
+    \else
+      \vspace{-1pt}%
+      \noindent\entrytech{#1}%
+      \vspace{2pt}%
+    \fi
+    \begin{itemize}[nosep, leftmargin=1.25em, itemsep=1.2pt, label=--]%
     }
-    {
-    \end{itemize}
-    \vspace{1.5pt}
+    {%
+    \end{itemize}%
+    \vspace{1.5pt}%
     }
-
 
 %----------------------------------------------------------------------------
 \begin{document}
@@ -82,9 +88,7 @@
 %----------------------------------------------------------------------------
 \section{Projects}
 
-\begin{joblong}{AstroFrame -- \href{https://store.steampowered.com/app/4420390/AstroFrame/}{\faSteam\ Steam}}{Nov 2025 - Current}
-    \vspace{-4pt}
-    \entrytech{Godot, Python, HLSL Shaders, Steamworks}
+\begin{joblong}[Godot, Python, HLSL Shaders, Steamworks]{AstroFrame -- \href{https://store.steampowered.com/app/4420390/AstroFrame/}{\faSteam\ Steam}}{Nov 2025 - Current}
     \item Led a 7-person team to build and release a spaceship building and exploration game on Steam.
     \item Executed the complete development lifecycle from pre-production through production and successful playtest release, with full release upcoming.
     \item Organized team meetings, managed milestones, and met deliverables within a mock production studio class environment.
@@ -94,46 +98,34 @@
 %----------------------------------------------------------------------------
 \section{Experience}
 
-\begin{joblong}{Engineering Game Lab Manager -- UCSC Baskin Engineering Lab Support}{Sep 2025 - Aug 2026}
-    \vspace{-4pt}
-    \entrytech{Affinity, Canva, Python, Google Sheets, Google Apps Script}
+\begin{joblong}[Affinity, Canva, Python, Google Sheets, Google Apps Script]{Engineering Game Lab Manager -- UCSC Baskin Engineering Lab Support}{Sep 2025 - Aug 2026}
     \item Supported 25 capstone projects (teams of 5--12) and facilitated community for $\sim$200 capstone students.
     \item Maintained lab facilities across 5 rooms, serviced computers and game consoles, organized supplies, and created technical documentation and signage.
     \item Built and deployed an inventory system managing 2,500+ hardware components and development kits across UCSC engineering labs, automating workflows for easy data reentry and status updates.
 \end{joblong}
 
-\begin{joblong}{Software Development Intern -- Guide Robotics (Tokyo, Japan)}{Jun 2025 - Aug 2025}
-    \vspace{-4pt}
-    \entrytech{Unix, ROS2, Gazebo, RViz, OpenCV, YOLO, Python}
+\begin{joblong}[Unix, ROS2, Gazebo, RViz, OpenCV, YOLO, Python]{Software Development Intern -- Guide Robotics (Tokyo, Japan)}{Jun 2025 - Aug 2025}
     \item Configured ROS and Gazebo environments to simulate a TurtleBot 4, successfully integrating both the digital twin and physical robot with internal software tools.
     \item Researched and implemented a YOLO-based computer vision model for object identification on a Qualcomm RB3 Gen 2 Development Kit.
 \end{joblong}
 
-\begin{joblong}{Software Researcher -- UCSC Procedural Generation Lab}{Sep 2024 - Jun 2025}
-    \vspace{-4pt}
-    \entrytech{TypeScript, LLMs, Python, LaTeX}
+\begin{joblong}[TypeScript, LLMs, Python, LaTeX]{Software Researcher -- UCSC Procedural Generation Lab}{Sep 2024 - Jun 2025}
     \item Programmed scripts to generate procedural worlds using algorithms like Wave Function Collapse.
     \item Compiled several datasets for use in training Large Language Models and fine-tuned LLMs.
     \item Co-authored a conference paper published at FDG, contributing to research and technical details.
 \end{joblong}
 
-\begin{joblong}{Tutor and Grader -- UCSC Baskin School of Engineering}{Sep 2024 - Jun 2025}
-    \vspace{-4pt}
-    \entrytech{Blender 3D, Adobe Substance}
+\begin{joblong}[Blender 3D, Adobe Substance]{Tutor and Grader -- UCSC Baskin School of Engineering}{Sep 2024 - Jun 2025}
     \item Worked closely with a class of 60 students in weekly meetings to instruct on the use of 3D modeling software.
     \item Developed teaching materials, made video lectures, graded coursework, and provided detailed feedback to students.
 \end{joblong}
 
-\begin{joblong}{Independent Contractor -- Turbostrat LLC}{Mar 2024 - Apr 2024}
-    \vspace{-4pt}
-    \entrytech{Unity, Figma, C\#, Augmented Reality (AR)}
+\begin{joblong}[Unity, Figma, C\#, Augmented Reality (AR)]{Independent Contractor -- Turbostrat LLC}{Mar 2024 - Apr 2024}
     \item Designed and implemented an interactive UI and tutorial for a mobile AR adaptation of \textit{Breakout}.
     \item Planned, architected, and documented software systems and UX design.
 \end{joblong}
 
-\begin{joblong}{Robotics Club Team Lead -- UCSC Slugbotics Arm Team}{Sep 2023 - Jun 2025}
-    \vspace{-4pt}
-    \entrytech{Python, YOLO, APIs, Git, CoppeliaSim}
+\begin{joblong}[Python, YOLO, APIs, Git, CoppeliaSim]{Robotics Club Team Lead -- UCSC Slugbotics Arm Team}{Sep 2023 - Jun 2025}
     \item Engineered a lightweight 3-DOF open-source robotic arm; maintained and expanded the codebase.
     \item Organized team meetings, demonstrated progress to club leadership, and onboarded 30 new club members.
     \item Showcased the project live at the Open Sauce 2024 conference.
