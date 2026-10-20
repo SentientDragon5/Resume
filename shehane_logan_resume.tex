@@ -1,9 +1,9 @@
-\documentclass[a4paper,11pt]{article}
+\documentclass[a4paper,10pt]{article}
 
 %----------------------------------------------------------------------------
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[scale=0.9, top=1.5cm, bottom=1.5cm, left=2cm, right=2cm]{geometry}
+\usepackage[top=1.2cm, bottom=1.2cm, left=1.8cm, right=1.8cm]{geometry}
 
 % https://tug.org/FontCatalogue/sansseriffonts.html
 \usepackage[sfdefault,light]{FiraSans}
@@ -25,23 +25,25 @@
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
 
 % Section Formatting
-\titleformat{\section}{\Large\scshape\raggedright\color{goodgreen}}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{6pt}{4pt}
+\titleformat{\section}{\large\scshape\raggedright\color{goodgreen}}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{4pt}{2pt}
 
 \newcolumntype{C}{>{\centering\arraybackslash}X} 
 
+\newcommand{\entrytech}[1]{\noindent{\small\textit{Technologies:} #1}\par\vspace{-2pt}}
+
 \newenvironment{joblong}[2]
     {
-    \par\vspace{4pt}\noindent
+    \par\vspace{2.5pt}\noindent
     \begin{tabularx}{\linewidth}{@{} X r @{}}
     \textbf{#1} & #2 \\
     \end{tabularx}
-    \vspace{-8pt}
-    \begin{itemize}[nosep, leftmargin=1.5em, itemsep=2pt, label=--]
+    \vspace{-7pt}
+    \begin{itemize}[nosep, leftmargin=1.25em, itemsep=1.2pt, label=--]
     }
     {
     \end{itemize}
-    \vspace{4pt}
+    \vspace{1.5pt}
     }
 
 
@@ -52,7 +54,7 @@
 
 %----------------------------------------------------------------------------
 \begin{center}
-    {\Huge \textbf{Logan Shehane}}\\[8pt]
+    {\LARGE \textbf{Logan Shehane}}\\[4pt]
     \href{https://github.com/SentientDragon5}{\faGithub\ SentientDragon5} \ $|$ \ 
     \href{https://linkedin.com/in/lashehane/}{\faLinkedin\ lashehane} \ $|$ \ 
     \href{https://sentientdragon5gamedev.itch.io}{\faGamepad\ Demos} \ $|$ \ 
@@ -60,68 +62,92 @@
 \end{center}
 
 %----------------------------------------------------------------------------
-\section{Summary}
-\noindent
-Software Engineer and incoming M.S. Computer Science student at UC San Diego with hands-on experience spanning game development, robotics, computer vision, and AI/LLMs. Proven record of leading technical projects, co-authoring FDG-published research, and releasing a complete Godot game on Steam.
+% \section{Summary}
+% \noindent
+% Software Engineer and incoming M.S. Computer Science student at UC San Diego with hands-on experience spanning game development, robotics, computer vision, and AI/LLMs. Proven record of leading technical projects, co-authoring FDG-published research, and releasing a complete Godot game on Steam.
 
 
 %----------------------------------------------------------------------------
 \section{Education}
-\noindent
-\begin{tabularx}{\linewidth}{@{} X r @{}}     
-\textbf{M.S. Computer Science at UC San Diego} & Sept 2026 - June 2028 (Expected) \\
-\end{tabularx}
 
-\begin{joblong}{B.S. Computer Science: Game Design at UC Santa Cruz}{Sept 2022 - June 2026}
-    \item Capstone: Led a 7-person team to build and release \textit{AstroFrame} (spaceship builder/combat game in Godot) on Steam
-    \item Focus areas: Procedural Generation, Artificial Intelligence, LLMs, Computer Vision, and Robotics
-    \item Well-rounded knowledge across multidisciplinary topics including Sailing and Paleontology
+\begin{joblong}{M.S. Computer Science - UC San Diego}{Sep 2026 - Jun 2028 (Expected)}
+    \item Current Coursework: Human-Computer Interaction (HCI), FPGA Hardware Acceleration \& System Design
+\end{joblong}
+
+\begin{joblong}{B.S. Computer Science: Game Design - UC Santa Cruz}{Sep 2022 - Jun 2026}
+    \item Focus areas: Procedural Generation, Game Development, LLMs, Computer Vision, and Robotics
+    \item Coursework: Rapid Prototyping, Game Writing, Procedural Audio Generation, Game Production, Marketing
+\end{joblong}
+
+%----------------------------------------------------------------------------
+\section{Projects}
+
+\begin{joblong}{AstroFrame -- \href{https://store.steampowered.com/app/4420390/AstroFrame/}{\faSteam\ Steam}}{Nov 2025 - Current}
+    \vspace{-4pt}
+    \entrytech{Godot, Python, HLSL Shaders, Steamworks}
+    \item Led a 7-person team to build and release a spaceship building and exploration game on Steam.
+    \item Executed the complete development lifecycle from pre-production through production and successful playtest release, with full release upcoming.
+    \item Organized team meetings, managed milestones, and met deliverables within a mock production studio class environment.
+    \item Attended the Game Developers Conference (GDC) 2026, showcasing the game at multiple exhibition events.
 \end{joblong}
 
 %----------------------------------------------------------------------------
 \section{Experience}
 
-\begin{joblong}{Engineering Game Lab Manager -- UCSC Baskin Engineering Lab Support}{Sept 2025 - Aug 2026}
-    \item Supported capstone projects and facilitated community.
-    \item Maintained lab space and equipment.
+\begin{joblong}{Engineering Game Lab Manager -- UCSC Baskin Engineering Lab Support}{Sep 2025 - Aug 2026}
+    \vspace{-4pt}
+    \entrytech{Affinity, Canva, Python, Google Sheets, Google Apps Script}
+    \item Supported 25 capstone projects (teams of 5--12) and facilitated community for $\sim$200 capstone students.
+    \item Maintained lab facilities across 5 rooms, serviced computers and game consoles, organized supplies, and created technical documentation and signage.
+    \item Built and deployed an inventory system managing 2,500+ hardware components and development kits across UCSC engineering labs, automating workflows for easy data reentry and status updates.
 \end{joblong}
 
-\begin{joblong}{Software Development Intern -- Guide Robotics (Tokyo, Japan)}{June 2025 - Aug 2025}
+\begin{joblong}{Software Development Intern -- Guide Robotics (Tokyo, Japan)}{Jun 2025 - Aug 2025}
+    \vspace{-4pt}
+    \entrytech{Unix, ROS2, Gazebo, RViz, OpenCV, YOLO, Python}
     \item Configured ROS and Gazebo environments to simulate a TurtleBot 4, successfully integrating both the digital twin and physical robot with internal software tools.
     \item Researched and implemented a YOLO-based computer vision model for object identification on a Qualcomm RB3 Gen 2 Development Kit.
 \end{joblong}
 
-\begin{joblong}{Software Researcher -- UCSC Procedural Generation Lab}{Sept 2024 - June 2025}
+\begin{joblong}{Software Researcher -- UCSC Procedural Generation Lab}{Sep 2024 - Jun 2025}
+    \vspace{-4pt}
+    \entrytech{TypeScript, LLMs, Python, LaTeX}
     \item Programmed scripts to generate procedural worlds using algorithms like Wave Function Collapse.
     \item Compiled several datasets for use in training Large Language Models and fine-tuned LLMs.
     \item Co-authored a conference paper published at FDG, contributing to research and technical details.
 \end{joblong}
 
-\begin{joblong}{Tutor and Grader -- UCSC Baskin School of Engineering}{Sept 2024 - June 2025}
-    \item Conducted weekly meetings with students to instruct on the use of 3D modeling software.
-    \item Developed teaching materials, graded work, and provided feedback to students.
+\begin{joblong}{Tutor and Grader -- UCSC Baskin School of Engineering}{Sep 2024 - Jun 2025}
+    \vspace{-4pt}
+    \entrytech{Blender 3D, Adobe Substance}
+    \item Worked closely with a class of 60 students in weekly meetings to instruct on the use of 3D modeling software.
+    \item Developed teaching materials, made video lectures, graded coursework, and provided detailed feedback to students.
 \end{joblong}
 
 \begin{joblong}{Independent Contractor -- Turbostrat LLC}{Mar 2024 - Apr 2024}
-    \item Designed an interactive UI and tutorial for mobile AR game.
-    \item Planned, implemented, and documented software and design.
+    \vspace{-4pt}
+    \entrytech{Unity, Figma, C\#, Augmented Reality (AR)}
+    \item Designed and implemented an interactive UI and tutorial for a mobile AR adaptation of \textit{Breakout}.
+    \item Planned, architected, and documented software systems and UX design.
 \end{joblong}
 
-\begin{joblong}{Robotics Club Team Lead -- UCSC Slugbotics Arm Team}{Sept 2023 - June 2025}
-    \item Engineered an open-source robotic arm; maintained and expanded the codebase.
-    \item Organized meetings, demonstrated progress, and onboarded new members.
+\begin{joblong}{Robotics Club Team Lead -- UCSC Slugbotics Arm Team}{Sep 2023 - Jun 2025}
+    \vspace{-4pt}
+    \entrytech{Python, YOLO, APIs, Git, CoppeliaSim}
+    \item Engineered a lightweight 3-DOF open-source robotic arm; maintained and expanded the codebase.
+    \item Organized team meetings, demonstrated progress to club leadership, and onboarded 30 new club members.
+    \item Showcased the project live at the Open Sauce 2024 conference.
 \end{joblong}
 
 %----------------------------------------------------------------------------
 \section{Skills}
 \begin{tabularx}{\linewidth}{@{} l X @{}}
-\textbf{Languages} & Python, C\# (Unity), C, C++, Javascript, HTML, CSS \\ [4pt]
-\textbf{Technologies} & Unity, Godot, Blender 3D, LLMs, APIs, Git, Unix, ROS2, Gazebo, OpenCV, YOLO, RViz \\ [4pt]
-\textbf{Awards} & Dean's Honors, Eagle Scout
+\textbf{Languages} & Python, C\# (Unity), C, C++, JavaScript, TypeScript, HTML, CSS \\ [2pt]
+\textbf{Technologies} & Unity, Godot, ROS2, Gazebo, OpenCV, YOLO, RViz, LLMs, APIs, Git, Unix, Steamworks, LaTeX \\ [2pt]
+\textbf{Interests; Awards} & Sailing, Hiking, Music, Paleontology ; Dean's Honors, Eagle Scout
 \end{tabularx}
 
 \vfill
 \center{\footnotesize Last updated: \today \ $|$ \ \href{https://sentientdragon5.github.io/Resume/}{Open Latest}}
 
-\enlargethispage{2\baselineskip}
 \end{document}
